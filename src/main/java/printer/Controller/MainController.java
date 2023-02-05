@@ -1,7 +1,6 @@
 package printer.Controller;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import printer.Client.PrinterJobClient;
 import printer.Model.UserModel;
 import printer.Service.UserModelService;
 
@@ -36,7 +36,7 @@ public class MainController {
 							@RequestParam(value="instantPrint", defaultValue = "false") boolean instantPrint,
 							@RequestParam(value="isPrintedBefore", defaultValue = "false") boolean isPrintedBefore,
 							HttpSession s,
-							Model model) throws FileNotFoundException {
+							Model model) throws Exception {
 
 		
 		byte[] fileData = fileUpPath.getBytes();
@@ -60,7 +60,14 @@ public class MainController {
 			instantPrint = false;
 		}else {
 			instantPrint = true;
+
+			if (instantPrint == true) {
+				System.out.println("going inside PrinterJobClient");
+				PrinterJobClient printerJobClient = new PrinterJobClient();
+				printerJobClient.printing(path,fname);
+			}
 		}
+		
 		
 		System.out.println(instantPrint);
 		

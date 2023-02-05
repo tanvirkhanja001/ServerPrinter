@@ -6,10 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Successful</title>
 </head>
 <body>
-	<h1>File is Uploaded successfully...!</h1>
-	<h2>${userModelMessage}</h2>
+	<div class="container mt-5">
+		<h1>File is Uploaded successfully...!</h1>
+		<h2>${userModelMessage}</h2>
+	</div>
 </body>
 </html>
