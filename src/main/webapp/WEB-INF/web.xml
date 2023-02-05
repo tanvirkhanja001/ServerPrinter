@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
@@ -14,4 +15,22 @@
   	<servlet-name>printer</servlet-name>
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
+=======
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  	<servlet-name>printer</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>printer</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+>>>>>>> 8bc82d02ee0c67f4eda06e02c2787e08d3e68e66
 </web-app>
